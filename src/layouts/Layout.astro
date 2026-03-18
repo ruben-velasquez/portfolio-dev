@@ -1,33 +1,40 @@
 ---
-import '@fontsource/kanit';
-import '@fontsource-variable/figtree';
-import SEO from '@/components/SEO.astro';
+// @ts-ignore
+import "@fontsource/kanit";
+// @ts-ignore
+import "@fontsource-variable/figtree";
+import SEO from "@/components/SEO.astro";
 
 interface Props {
-    title: string,
-    description: string,
-    canonical: string,
+  title: string;
+  description: string;
+  canonical: string;
 }
 ---
 
 <html lang="en">
-	<head>
-		<SEO {...Astro.props} />
-	</head>
-	<body>
-		<div class="absolute -z-10 inset-0 bg-slate-950"><div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div></div>
-		<slot />
-	</body>
+  <head>
+    <SEO {...Astro.props} />
+  </head>
+  <body>
+    <div class="absolute -z-10 inset-0 bg-slate-950">
+      <div
+        class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"
+      >
+      </div>
+    </div>
+    <slot />
+  </body>
 </html>
 
 <style is:global>
-	body {
-		font-family: 'Kanit', sans-serif;
-		@apply text-white px-4 sm:px-10 md:px-40 xl:px-96 bg-slate-950 pb-24 py-24 grid gap-14
-	}
+  body {
+    font-family: "Kanit", sans-serif;
+    @apply text-white px-4 sm:px-10 md:px-40 xl:px-96 bg-slate-950 pb-24 py-24 grid gap-14;
+  }
 
-	p {
-		font-family: 'Figtree Variable', sans-serif;
-		@apply text-gray-300
-	}
+  p {
+    font-family: "Figtree Variable", sans-serif;
+    @apply text-gray-300;
+  }
 </style>

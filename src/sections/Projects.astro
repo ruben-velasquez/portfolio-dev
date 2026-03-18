@@ -1,8 +1,10 @@
 ---
-import ProjectCard from "../components/ProjectCard.astro";
-import Unity from "@/icons/Unity.astro"
 import CSharp from "@/icons/CSharp.astro";
 import NextJS from "@/icons/Nextjs.astro";
+import TypeScript from "@/icons/TypeScript.astro";
+import Unity from "@/icons/Unity.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import Drizzle from "@/icons/Drizzle.astro";
 
 const PROJECTS = [
     {
@@ -34,6 +36,42 @@ const PROJECTS = [
                 icon: NextJS, 
                 class: "bg-slate-900 text-white"
             }
+        ]
+    },
+    {
+        id: "ecommerce",
+        title: "Test E commerce",
+        description: "An functional e-commerce made by hand using Nextjs, Supabase, Drizzle and TransBank SDK.",
+        url: "https://github.com/ruben-velasquez/E-commerce-test",
+        badges: [
+            {
+                name: "NextJS", 
+                icon: NextJS, 
+                class: "bg-slate-900 text-white"
+            },
+            {
+                name: "Drizzle", 
+                icon: Drizzle, 
+                class: "bg-[#a3ca45] text-white"
+            },
+        ]
+    },
+    {
+        id: "schoolapp",
+        title: "School App",
+        description: "An simple interface to store grades and notes for students using localStorage.",
+        url: "https://school-app-lyart-beta.vercel.app/",
+        badges: [
+            {
+                name: "NextJS", 
+                icon: NextJS, 
+                class: "bg-slate-900 text-white"
+            },
+            {
+                name: "TypeScript", 
+                icon: TypeScript, 
+                class: "bg-sky-900 text-white"
+            },
         ]
     },
 ]
